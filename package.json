@@ -4,10 +4,13 @@
   "description": "a test project",
   "main": "index.js",
   "scripts": {
+    "git:log:last": "git log -1 --pretty=format:\"%s\"",
     "git:tags:clean": "git tag -l | xargs git tag -d",
     "git:tags:fetch": "git fetch --tags",
     "git:tags:push": "git push --tags",
+    "changelog": "./node_modules/.bin/github-changes -n ${npm_package_version} --o ronapelbaum -r npm-version-test --use-commit-body",
     "preversion": "npm run git:tags:clean && npm run git:tags:fetch",
+    "version": "npm run changelog && git add CHANGELOG.md",
     "postversion": "npm run git:tags:push",
     "test": "echo \"--- TESTING...\""
   },
@@ -20,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/ronapelbaum/npm-version-test/issues"
   },
-  "homepage": "https://github.com/ronapelbaum/npm-version-test#readme"
+  "homepage": "https://github.com/ronapelbaum/npm-version-test#readme",
+  "devDependencies": {
+    "github-changes": "^1.1.0"
+  }
 }
