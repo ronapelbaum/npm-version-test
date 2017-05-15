@@ -1,15 +1,8 @@
 const exec = require('child_process').exec;
 
-const gitLogCmd = "git log -1 --pretty=format:%s";
-const versionRegex = /version=(major|minor|patch)/ig;
-const defaultVersion = 'patch';
+exec("git log -1 --pretty=format:%s", function(error, stdout, stderr) {
+  const regRes = /version=(major|minor|patch)/ig.exec(stdout);
+  const version = (regRes && regRes[1]) || 'patch';
 
-exec(gitLogCmd, function(error, stdout, stderr) {
-  const version = stdout.match(versionRegex);
-  if(version && version.length){
-    console.log(version[0].replace(/version=/,''))
-  } else {
-    console.log(defaultVersion);
-  }
-
+  console.log(version)
 });
