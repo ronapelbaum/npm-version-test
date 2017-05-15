@@ -1,5 +1,8 @@
 ## Change Log
 
+### v1.2.0-0 (2017/05/15 13:41 +00:00)
+- [da599f9](https://github.com/ronapelbaum/npm-version-test/commit/da599f96184c4ec22000e93de3a1656d0710deab) 1.2.0-0 (@ronapelbaum)
+
 ### v1.1.1 (2017/05/15 13:36 +00:00)
 - [5df46ac](https://github.com/ronapelbaum/npm-version-test/commit/5df46ace4026c57a729e6efc88c3caf934f09b90) 1.1.1 (@ronapelbaum)
 - [a91c2ea](https://github.com/ronapelbaum/npm-version-test/commit/a91c2ea7711b81ba139c9ff8bb48970580375a6e) add chlog (@ronapelbaum)
