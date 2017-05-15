@@ -13,6 +13,7 @@
     "xpreversion": "npm run git:tags:clean && npm run git:tags:fetch",
     "xversion": "npm run changelog && git add CHANGELOG.md",
     "postversion": "git push && git push --tags",
+    "prepublish": "npm run bump",
     "test": "echo \"--- TESTING...\""
   },
   "repository": {
