@@ -8,7 +8,7 @@
     "git:tags:clean": "git tag -l | xargs git tag -d",
     "git:tags:fetch": "git fetch --tags",
     "git:tags:push": "git push --tags",
-    "bump": "node verions.js | xargs npm version",
+    "bump": "node version.js | xargs npm version",
     "changelog": "./node_modules/.bin/github-changes -n ${npm_package_version} --o ronapelbaum -r npm-version-test --use-commit-body",
     "preversion": "npm run git:tags:clean && npm run git:tags:fetch",
     "version": "npm run changelog && git add CHANGELOG.md",
