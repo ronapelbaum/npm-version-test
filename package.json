@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "bump": "node ./version.js | xargs npm version",
-    "prepublish": "npm run bump",
+    "prepublishOnly": "npm run bump",
     "git:log:last": "git log -1 --pretty=format:\"%s\"",
     "git:tags:clean": "git tag -l | xargs git tag -d",
     "git:tags:fetch": "git fetch --tags",
