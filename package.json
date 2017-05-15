@@ -4,7 +4,12 @@
   "description": "a test project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "git:tags:clean": "git tag -l | xargs git tag -d",
+    "git:tags:fetch": "git fetch --tags",
+    "git:tags:push": "git push --tags",
+    "preversion": "npm run git:tags:clean && npm run git:tags:fetch",
+    "postversion": "npm run git:tags:push",
+    "test": "echo \"--- TESTING...\""
   },
   "repository": {
     "type": "git",
