@@ -9,3 +9,5 @@ script:
 deploy:
   provider: npm
   email: "ronapelbaum@gmail.com"
+  on:
+    tags: true
