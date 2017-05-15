@@ -5,3 +5,7 @@ node_js:
 script:
   - npm test
   - npm publish
+  
+deploy:
+  provider: npm
+  email: "ronapelbaum@gmail.com"
