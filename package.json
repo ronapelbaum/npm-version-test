@@ -15,7 +15,7 @@
     "changelog": "./node_modules/.bin/github-changes -n ${npm_package_version} --o ronapelbaum -r npm-version-test --use-commit-body",
     "xpreversion": "npm run git:tags:clean && npm run git:tags:fetch",
     "xversion": "npm run changelog && git add CHANGELOG.md",
-    "postversion": "git push && git push --tags",
+    "xpostversion": "git push && git push --tags",
     "test": "echo \"--- TESTING...\""
   },
   "repository": {
