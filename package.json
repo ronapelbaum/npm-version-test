@@ -1,10 +1,10 @@
 {
   "name": "npm-version-test",
-  "version": "2.1.5",
+  "version": "2.1.0",
   "description": "a test project",
   "main": "index.js",
   "scripts": {
-    "bump": "node ./version.js | xargs npm version",
+    "bump": "patch-version",
     "prepublishOnly": "npm run bump",
     "git:log:last": "git log -1 --pretty=format:\"%s\"",
     "git:tags:clean": "git tag -l | xargs git tag -d",
@@ -29,6 +29,8 @@
   },
   "homepage": "https://github.com/ronapelbaum/npm-version-test#readme",
   "devDependencies": {
-    "github-changes": "^1.1.0"
+    "github-changes": "^1.1.0",
+    "semver": "^5.3.0",
+    "aol-on-version-utils": "file:../aol-on-version-utils"
   }
 }
